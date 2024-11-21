@@ -1,4 +1,4 @@
-package com.rabbitminers.extendedbogeys.bogeys.compat.steamnrails;
+package com.rabbitminers.extendedbogeys.compat.steamnrails;
 
 import com.rabbitminers.extendedbogeys.ExtendedBogeys;
 import net.minecraft.resources.ResourceLocation;

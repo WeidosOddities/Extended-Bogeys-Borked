@@ -1,4 +1,4 @@
-package com.rabbitminers.extendedbogeys.bogeys.compat;
+package com.rabbitminers.extendedbogeys.compat;
 
 import com.simibubi.create.foundation.utility.Lang;
 import dev.architectury.injectables.annotations.ExpectPlatform;

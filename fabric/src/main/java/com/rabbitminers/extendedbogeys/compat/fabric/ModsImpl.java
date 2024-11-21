@@ -1,4 +1,4 @@
-package com.rabbitminers.extendedbogeys.bogeys.compat.fabric;
+package com.rabbitminers.extendedbogeys.compat.fabric;
 
 import net.fabricmc.loader.api.FabricLoader;
 import org.jetbrains.annotations.Nullable;
