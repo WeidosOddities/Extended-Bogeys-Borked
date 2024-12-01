@@ -1,6 +1,5 @@
 package com.rabbitminers.extendedbogeys.data;
 
-
 import com.rabbitminers.extendedbogeys.registry.ExtendedBogeysBogeySizes;
 import com.simibubi.create.content.trains.bogey.BogeySizes;
 import org.jetbrains.annotations.Nullable;
@@ -27,12 +26,6 @@ public enum ExtendedBogeysBogeySize {
         this.inBuilt = false;
     }
 
-    public static ExtendedBogeysBogeySize[] iterateCustom() {
-        return Arrays.stream(ExtendedBogeysBogeySize.values())
-                .filter(value -> !value.inBuilt)
-                .toArray(ExtendedBogeysBogeySize[]::new);
-    }
-
     public String id() {
         return this.size.location().getPath();
     }
@@ -43,10 +36,5 @@ public enum ExtendedBogeysBogeySize {
                 .filter(value -> value.size == size)
                 .findFirst()
                 .orElse(null);
-    }
-
-    public static boolean isSupported(BogeySizes.BogeySize size) {
-        return Arrays.stream(ExtendedBogeysBogeySize.values())
-                .anyMatch(value -> value.size == size);
     }
 }
