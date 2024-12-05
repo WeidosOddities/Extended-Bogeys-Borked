@@ -1,7 +1,7 @@
 package com.rabbitminers.extendedbogeys;
 
-import com.rabbitminers.extendedbogeys.compat.Mods;
-import com.rabbitminers.extendedbogeys.compat.steamnrails.MenuImpl;
+import com.rabbitminers.extendedbogeys.bogeys.compat.Mods;
+import com.rabbitminers.extendedbogeys.bogeys.compat.steamnrails.MenuImpl;
 import com.rabbitminers.extendedbogeys.registry.ExtendedBogeysPartials;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 

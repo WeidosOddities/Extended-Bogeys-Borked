@@ -2,8 +2,10 @@ package com.rabbitminers.extendedbogeys.registry;
 
 import com.rabbitminers.extendedbogeys.ExtendedBogeys;
 import com.rabbitminers.extendedbogeys.base.types.BogeySizeBlockSet;
+import com.rabbitminers.extendedbogeys.bogeys.blocks.ExtraLargeBogeyBlock;
 import com.rabbitminers.extendedbogeys.bogeys.blocks.UnlinkedBogeyBlock;
 import com.rabbitminers.extendedbogeys.bogeys.blocks.UnlinkedBogeyCarriageMovementBehaviour;
+import com.rabbitminers.extendedbogeys.data.BuilderTransformers;
 import com.rabbitminers.extendedbogeys.multiloader.BlockstateGenerationHooks;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.content.trains.bogey.BogeySizes;
@@ -38,6 +40,12 @@ public class ExtendedBogeysBlocks {
 					.register();
 		else return size.size == BogeySizes.LARGE ? AllBlocks.LARGE_BOGEY : AllBlocks.SMALL_BOGEY;
 	});
+
+	public static final BogeySizeBlockSet<ExtraLargeBogeyBlock> EXTRA_LARGE_BOGEYS = new BogeySizeBlockSet<>(size ->
+			REGISTRATE.block(size.id() + "_bogey", p -> new ExtraLargeBogeyBlock(p, size.size))
+					.properties(p -> p.mapColor(MapColor.PODZOL))
+					.transform(BuilderTransformers.bogey())
+					.register());
 
 	public static void register() {
 		ExtendedBogeys.LOGGER.info("Registering blocks for " + ExtendedBogeys.MOD_NAME);
