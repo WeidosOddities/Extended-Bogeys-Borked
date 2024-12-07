@@ -1,12 +1,10 @@
 package com.rabbitminers.extendedbogeys.bogeys.renderers;
 
-import com.jozufozu.flywheel.api.MaterialManager;
 import com.jozufozu.flywheel.util.transform.Transform;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.rabbitminers.extendedbogeys.base.Constants;
 import com.simibubi.create.content.trains.bogey.BogeyRenderer;
-import com.simibubi.create.content.trains.entity.CarriageBogey;
 import com.simibubi.create.foundation.render.SuperByteBuffer;
 import com.simibubi.create.foundation.utility.NBTHelper;
 import net.minecraft.core.Direction;

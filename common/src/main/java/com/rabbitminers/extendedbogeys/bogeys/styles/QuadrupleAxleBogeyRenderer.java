@@ -70,19 +70,19 @@ public class QuadrupleAxleBogeyRenderer {
             double wheel_l = AngleHelper.rad(wheelAngle + 90);
 
             double wheel_r180 = AngleHelper.rad(-(wheelAngle + 0));
-            double wheel_l180 = AngleHelper.rad(-(wheelAngle + 90));
+            double wheel_l180 = AngleHelper.rad(-(wheelAngle - 90));
 
-            double zoffset_r = 1 / 4f * Math.sin(wheel_r);
-            double zoffset_l = 1 / 4f * Math.sin(wheel_l);
+            double zoffset_r = 0.25*Math.sin(wheel_r+((1.25/16f)*Math.cos(wheel_r)));
+            double zoffset_l = 0.25*Math.sin(wheel_l+((1.25/16f)*Math.cos(wheel_l)));
 
-            double zoffset_r180 = 1 / 4f * Math.sin(wheel_r180);
-            double zoffset_l180 = 1 / 4f * Math.sin(wheel_l180);
+            double zoffset_r180 = 0.25*Math.sin(wheel_r180+((1.25/16f)*Math.cos(wheel_r180)));
+            double zoffset_l180 = 0.25*Math.sin(wheel_l180+((1.25/16f)*Math.cos(wheel_l180)));
 
-            double xrotate_r = AngleHelper.deg(Math.sin(-Math.cos(wheel_r) * 0.08));
-            double xrotate_l = AngleHelper.deg(Math.sin(-Math.cos(wheel_l) * 0.08));
+            double xrotate_r = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_r)/3))));
+            double xrotate_l = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_l)/3))));
 
-            double xrotate_r180 = AngleHelper.deg(Math.sin(-Math.cos(wheel_r180) * 0.08));
-            double xrotate_l180 = AngleHelper.deg(Math.sin(-Math.cos(wheel_l180) * 0.08));
+            double xrotate_r180 = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_r180)/3))));
+            double xrotate_l180 = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_l180)/3))));
 
             getTransform(LARGE_8_FRAME_LONG, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
@@ -145,15 +145,15 @@ public class QuadrupleAxleBogeyRenderer {
             getTransform(LARGE_8_RIGHT_M_ROD_LONG, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1, -3.8125)
-                    .rotateX(forwards ? xrotate_r : xrotate_r180)
                     .translateZ(forwards ? zoffset_r : zoffset_r180)
+                    .rotateX(forwards ? xrotate_r : xrotate_r180)
                     .render(ms, light, vb);
 
             getTransform(LARGE_8_LEFT_M_ROD_LONG, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1, -3.8125)
-                    .rotateX(forwards ? xrotate_l : xrotate_l180)
                     .translateZ(forwards ? zoffset_l : zoffset_l180)
+                    .rotateX(forwards ? xrotate_l : xrotate_l180)
                     .render(ms, light, vb);
         }
     }
@@ -181,19 +181,19 @@ public class QuadrupleAxleBogeyRenderer {
             double wheel_l = Math.toRadians(wheelAngle + 90);
 
             double wheel_r180 = Math.toRadians(-(wheelAngle + 0));
-            double wheel_l180 = Math.toRadians(-(wheelAngle + 90));
+            double wheel_l180 = Math.toRadians(-(wheelAngle - 90));
 
-            double zoffset_r = 1 / 4f * Math.sin(wheel_r);
-            double zoffset_l = 1 / 4f * Math.sin(wheel_l);
+            double zoffset_r = 0.25*Math.sin(wheel_r+((1.25/16f)*Math.cos(wheel_r)));
+            double zoffset_l = 0.25*Math.sin(wheel_l+((1.25/16f)*Math.cos(wheel_l)));
 
-            double zoffset_r180 = 1 / 4f * Math.sin(wheel_r180);
-            double zoffset_l180 = 1 / 4f * Math.sin(wheel_l180);
+            double zoffset_r180 = 0.25*Math.sin(wheel_r180+((1.25/16f)*Math.cos(wheel_r180)));
+            double zoffset_l180 = 0.25*Math.sin(wheel_l180+((1.25/16f)*Math.cos(wheel_l180)));
 
-            double xrotate_r = Math.toDegrees(Math.sin(-Math.cos(wheel_r) * 0.065));
-            double xrotate_l = Math.toDegrees(Math.sin(-Math.cos(wheel_l) * 0.065));
+            double xrotate_r = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_r)/3.75))));
+            double xrotate_l = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_l)/3.75))));
 
-            double xrotate_r180 = Math.toDegrees(Math.sin(-Math.cos(wheel_r180) * 0.065));
-            double xrotate_l180 = Math.toDegrees(Math.sin(-Math.cos(wheel_l180) * 0.065));
+            double xrotate_r180 = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_r180)/3.75))));
+            double xrotate_l180 = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_l180)/3.75))));
 
             getTransform(LARGE_8_FRAME_SHORT, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
@@ -256,19 +256,19 @@ public class QuadrupleAxleBogeyRenderer {
             getTransform(LARGE_8_RIGHT_M_ROD_SHORT, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1, -2.8125)
-                    .rotateX(forwards ? xrotate_r : xrotate_r180)
                     .translateZ(forwards ? zoffset_r : zoffset_r180)
+                    .rotateX(forwards ? xrotate_r : xrotate_r180)
                     .render(ms, light, vb);
 
             getTransform(LARGE_8_LEFT_M_ROD_SHORT, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1, -2.8125)
-                    .rotateX(forwards ? xrotate_l : xrotate_l180)
                     .translateZ(forwards ? zoffset_l : zoffset_l180)
+                    .rotateX(forwards ? xrotate_l : xrotate_l180)
                     .render(ms, light, vb);
         }
     }
-    public static class LargeQuadrupleAxlePistonlessBogeyRenderer extends ExtendedBogeysBogeyRenderer {
+    public static class LargeQuadrupleAxlePistonlessBogeyRenderer extends BogeyRenderer {
         @Override
         public void initialiseContraptionModelData(MaterialManager materialManager, CarriageBogey carriageBogey) {
             createModelInstance(materialManager, LARGE_8_FRAME_PISTONLESS);
@@ -281,11 +281,10 @@ public class QuadrupleAxleBogeyRenderer {
         public BogeySizes.BogeySize getSize() { return BogeySizes.LARGE; }
 
         @Override
-        public void render(boolean forwards, float wheelAngle, PoseStack ms, int light, VertexConsumer vb, boolean inContraption) {
+        public void render(CompoundTag bogeyData, float wheelAngle, PoseStack ms, int light, VertexConsumer vb, boolean inContraption) {
             boolean inInstancedContraption = vb == null;
 
             getTransform(LARGE_8_FRAME_PISTONLESS, ms, inInstancedContraption)
-                    .rotateY(forwards ? 0 : 180)
                     .render(ms, light, vb);
 
             BogeyModelData[] wheels1 = getTransform(LARGE_SHARED_WHEELS_SEMI_BLIND, ms, inInstancedContraption, 2);
@@ -293,9 +292,9 @@ public class QuadrupleAxleBogeyRenderer {
                 if (!inInstancedContraption)
                     ms.pushPose();
                 BogeyModelData wheel1 = wheels1[(side1 + 1) / 2];
-                wheel1.rotateY(forwards ? 0 : 180)
+                    wheel1
                         .translate(0, 1, side1 * 0.875)
-                        .rotateX(forwards ? wheelAngle: -wheelAngle)
+                        .rotateX(wheelAngle)
                         .render(ms, light, vb);
                 if (!inInstancedContraption)
                     ms.popPose();
@@ -306,27 +305,25 @@ public class QuadrupleAxleBogeyRenderer {
                 if (!inInstancedContraption)
                     ms.pushPose();
                 BogeyModelData wheel2 = wheels2[(side2 + 1) / 2];
-                wheel2.rotateY(forwards ? 0 : 180)
+                    wheel2
                         .translate(0, 1, side2 * 2.625)
-                        .rotateX(forwards ? wheelAngle: -wheelAngle)
+                        .rotateX(wheelAngle)
                         .render(ms, light, vb);
                 if (!inInstancedContraption)
                     ms.popPose();
             }
 
             getTransform(LARGE_8_RIGHT_C_ROD_PISTONLESS, ms, inInstancedContraption)
-                    .rotateY(forwards ? 0 : 180)
-                    .rotateX(forwards ? wheelAngle : -wheelAngle)
+                    .rotateX(wheelAngle)
                     .translate(0, 1 / 4f, 0)
-                    .rotateX(forwards ? -wheelAngle : wheelAngle)
+                    .rotateX(-wheelAngle)
                     .translateY(1)
                     .render(ms, light, vb);
 
             getTransform(LARGE_8_LEFT_C_ROD_PISTONLESS, ms, inInstancedContraption)
-                    .rotateY(forwards ? 0 : 180)
-                    .rotateX(forwards ? wheelAngle + 90 : -wheelAngle + 90)
+                    .rotateX(wheelAngle + 90)
                     .translate(0, 1 / 4f, 0)
-                    .rotateX(forwards ? -wheelAngle - 90 : wheelAngle - 90)
+                    .rotateX(-wheelAngle - 90)
                     .translateY(1)
                     .render(ms, light, vb);
         }
@@ -355,19 +352,19 @@ public class QuadrupleAxleBogeyRenderer {
             double wheel_l = AngleHelper.rad(wheelAngle + 90);
 
             double wheel_r180 = AngleHelper.rad(-(wheelAngle + 0));
-            double wheel_l180 = AngleHelper.rad(-(wheelAngle + 90));
+            double wheel_l180 = AngleHelper.rad(-(wheelAngle - 90));
 
-            double zoffset_r = 3 / 8f * Math.sin(wheel_r);
-            double zoffset_l = 3 / 8f * Math.sin(wheel_l);
+            double zoffset_r = 0.375*Math.sin(wheel_r+((1.25/16f)*Math.cos(wheel_r)));
+            double zoffset_l = 0.375*Math.sin(wheel_l+((1.25/16f)*Math.cos(wheel_l)));
 
-            double zoffset_r180 = 3 / 8f * Math.sin(wheel_r180);
-            double zoffset_l180 = 3 / 8f * Math.sin(wheel_l180);
+            double zoffset_r180 = 0.375*Math.sin(wheel_r180+((1.25/16f)*Math.cos(wheel_r180)));
+            double zoffset_l180 = 0.375*Math.sin(wheel_l180+((1.25/16f)*Math.cos(wheel_l180)));
 
-            double xrotate_r = AngleHelper.deg(Math.sin(-Math.cos(wheel_r) * 0.107));
-            double xrotate_l = AngleHelper.deg(Math.sin(-Math.cos(wheel_l) * 0.107));
+            double xrotate_r = AngleHelper.deg(Math.asin(0.375*((-Math.cos(wheel_r)/3.3125))));
+            double xrotate_l = AngleHelper.deg(Math.asin(0.375*((-Math.cos(wheel_l)/3.3125))));
 
-            double xrotate_r180 = AngleHelper.deg(Math.sin(-Math.cos(wheel_r180) * 0.107));
-            double xrotate_l180 = AngleHelper.deg(Math.sin(-Math.cos(wheel_l180) * 0.107));
+            double xrotate_r180 = AngleHelper.deg(Math.asin(0.375*((-Math.cos(wheel_r180)/3.3125))));
+            double xrotate_l180 = AngleHelper.deg(Math.asin(0.375*((-Math.cos(wheel_l180)/3.3125))));
 
             getTransform(EXTRA_LARGE_8_FRAME_LONG, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
@@ -430,15 +427,15 @@ public class QuadrupleAxleBogeyRenderer {
             getTransform(EXTRA_LARGE_8_RIGHT_M_ROD_LONG, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1.25, -4.4375)
-                    .rotateX(forwards ? xrotate_r : xrotate_r180)
                     .translateZ(forwards ? zoffset_r : zoffset_r180)
+                    .rotateX(forwards ? xrotate_r : xrotate_r180)
                     .render(ms, light, vb);
 
             getTransform(EXTRA_LARGE_8_LEFT_M_ROD_LONG, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1.25, -4.4375)
-                    .rotateX(forwards ? xrotate_l : xrotate_l180)
                     .translateZ(forwards ? zoffset_l : zoffset_l180)
+                    .rotateX(forwards ? xrotate_l : xrotate_l180)
                     .render(ms, light, vb);
         }
     }
@@ -466,19 +463,19 @@ public class QuadrupleAxleBogeyRenderer {
             double wheel_l = AngleHelper.rad(wheelAngle + 90);
 
             double wheel_r180 = AngleHelper.rad(-(wheelAngle + 0));
-            double wheel_l180 = AngleHelper.rad(-(wheelAngle + 90));
+            double wheel_l180 = AngleHelper.rad(-(wheelAngle - 90));
 
-            double zoffset_r = 3 / 8f * Math.sin(wheel_r);
-            double zoffset_l = 3 / 8f * Math.sin(wheel_l);
+            double zoffset_r = 0.375*Math.sin(wheel_r+((1.25/16f)*Math.cos(wheel_r)));
+            double zoffset_l = 0.375*Math.sin(wheel_l+((1.25/16f)*Math.cos(wheel_l)));
 
-            double zoffset_r180 = 3 / 8f * Math.sin(wheel_r180);
-            double zoffset_l180 = 3 / 8f * Math.sin(wheel_l180);
+            double zoffset_r180 = 0.375*Math.sin(wheel_r180+((1.25/16f)*Math.cos(wheel_r180)));
+            double zoffset_l180 = 0.375*Math.sin(wheel_l180+((1.25/16f)*Math.cos(wheel_l180)));
 
-            double xrotate_r = AngleHelper.deg(Math.sin(-Math.cos(wheel_r) * 0.08));
-            double xrotate_l = AngleHelper.deg(Math.sin(-Math.cos(wheel_l) * 0.08));
+            double xrotate_r = AngleHelper.deg(Math.asin(0.375*((-Math.cos(wheel_r)/4.5625))));
+            double xrotate_l = AngleHelper.deg(Math.asin(0.375*((-Math.cos(wheel_l)/4.5625))));
 
-            double xrotate_r180 = AngleHelper.deg(Math.sin(-Math.cos(wheel_r180) * 0.08));
-            double xrotate_l180 = AngleHelper.deg(Math.sin(-Math.cos(wheel_l180) * 0.08));
+            double xrotate_r180 = AngleHelper.deg(Math.asin(0.375*((-Math.cos(wheel_r180)/4.5625))));
+            double xrotate_l180 = AngleHelper.deg(Math.asin(0.375*((-Math.cos(wheel_l180)/4.5625))));
 
             getTransform(EXTRA_LARGE_8_FRAME_SHORT, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
@@ -537,19 +534,19 @@ public class QuadrupleAxleBogeyRenderer {
             getTransform(EXTRA_LARGE_8_RIGHT_M_ROD_SHORT, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1.25, -3.4375)
-                    .rotateX(forwards ? xrotate_r : xrotate_r180)
                     .translateZ(forwards ? zoffset_r : zoffset_r180)
+                    .rotateX(forwards ? xrotate_r : xrotate_r180)
                     .render(ms, light, vb);
 
             getTransform(EXTRA_LARGE_8_LEFT_M_ROD_SHORT, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1.25, -3.4375)
-                    .rotateX(forwards ? xrotate_l : xrotate_l180)
                     .translateZ(forwards ? zoffset_l : zoffset_l180)
+                    .rotateX(forwards ? xrotate_l : xrotate_l180)
                     .render(ms, light, vb);
         }
     }
-    public static class ExtraLargeQuadrupleAxlePistonlessBogeyRenderer extends ExtendedBogeysBogeyRenderer {
+    public static class ExtraLargeQuadrupleAxlePistonlessBogeyRenderer extends BogeyRenderer {
         @Override
         public void initialiseContraptionModelData(MaterialManager materialManager, CarriageBogey carriageBogey) {
             createModelInstance(materialManager, EXTRA_LARGE_8_FRAME_PISTONLESS);
@@ -562,11 +559,10 @@ public class QuadrupleAxleBogeyRenderer {
         public BogeySizes.BogeySize getSize() { return BogeySizes.LARGE; }
 
         @Override
-        public void render(boolean forwards, float wheelAngle, PoseStack ms, int light, VertexConsumer vb, boolean inContraption) {
+        public void render(CompoundTag bogeyData, float wheelAngle, PoseStack ms, int light, VertexConsumer vb, boolean inContraption) {
             boolean inInstancedContraption = vb == null;
 
             getTransform(EXTRA_LARGE_8_FRAME_PISTONLESS, ms, inInstancedContraption)
-                    .rotateY(forwards ? 0 : 180)
                     .render(ms, light, vb);
 
             BogeyModelData[] wheels1 = getTransform(EXTRA_LARGE_SHARED_WHEELS_SEMI_BLIND, ms, inInstancedContraption, 2);
@@ -574,9 +570,9 @@ public class QuadrupleAxleBogeyRenderer {
                 if (!inInstancedContraption)
                     ms.pushPose();
                 BogeyModelData wheel1 = wheels1[(side1 + 1) / 2];
-                wheel1.rotateY(forwards ? 0 : 180)
+                    wheel1
                         .translate(0, 1.25, side1 * 1.125)
-                        .rotateX(forwards ? wheelAngle: -wheelAngle)
+                        .rotateX(wheelAngle)
                         .render(ms, light, vb);
                 if (!inInstancedContraption)
                     ms.popPose();
@@ -585,25 +581,23 @@ public class QuadrupleAxleBogeyRenderer {
             BogeyModelData[] wheels2 = getTransform(EXTRA_LARGE_SHARED_WHEELS, ms, inInstancedContraption, 2);
             for (int side2 : Iterate.positiveAndNegative) {
                 BogeyModelData wheel2 = wheels2[(side2 + 1) / 2];
-                wheel2.rotateY(forwards ? 0 : 180)
+                    wheel2
                         .translate(0, 1.25, side2 * 3.375)
-                        .rotateX(forwards ? wheelAngle: -wheelAngle)
+                        .rotateX(wheelAngle)
                         .render(ms, light, vb);
             }
 
             getTransform(EXTRA_LARGE_8_RIGHT_C_ROD_PISTONLESS, ms, inInstancedContraption)
-                    .rotateY(forwards ? 0 : 180)
-                    .rotateX(forwards ? wheelAngle : -wheelAngle)
+                    .rotateX(wheelAngle)
                     .translate(0, 3 / 8f, 0)
-                    .rotateX(forwards ? -wheelAngle : wheelAngle)
+                    .rotateX(-wheelAngle)
                     .translateY(1.25)
                     .render(ms, light, vb);
 
             getTransform(EXTRA_LARGE_8_LEFT_C_ROD_PISTONLESS, ms, inInstancedContraption)
-                    .rotateY(forwards ? 0 : 180)
-                    .rotateX(forwards ? wheelAngle + 90 : -wheelAngle + 90)
+                    .rotateX(wheelAngle + 90)
                     .translate(0, 3 / 8f, 0)
-                    .rotateX(forwards ? -wheelAngle - 90 : wheelAngle - 90)
+                    .rotateX(-wheelAngle - 90)
                     .translateY(1.25)
                     .render(ms, light, vb);
         }

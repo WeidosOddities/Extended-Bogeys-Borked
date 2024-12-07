@@ -43,24 +43,24 @@ public class SextupleBogeyRenderer {
             double wheel_c = AngleHelper.rad(wheelAngle + 135);
 
             double wheel_r180 = AngleHelper.rad(-(wheelAngle + 0));
-            double wheel_l180 = AngleHelper.rad(-(wheelAngle + 225));
-            double wheel_c180 = AngleHelper.rad(-(wheelAngle + 135));
+            double wheel_l180 = AngleHelper.rad(-(wheelAngle - 225));
+            double wheel_c180 = AngleHelper.rad(-(wheelAngle - 135));
 
-            double zoffset_r = 1 / 4f * Math.sin(wheel_r);
-            double zoffset_l = 1 / 4f * Math.sin(wheel_l);
-            double zoffset_c = 1 / 4f * Math.sin(wheel_c);
+            double zoffset_r = 0.25*Math.sin(wheel_r+((1.25/16f)*Math.cos(wheel_r)));
+            double zoffset_l = 0.25*Math.sin(wheel_l+((1.25/16f)*Math.cos(wheel_l)));
+            double zoffset_c = 0.25*Math.sin(wheel_c+((1.25/16f)*Math.cos(wheel_c)));
 
-            double zoffset_r180 = 1 / 4f * Math.sin(wheel_r180);
-            double zoffset_l180 = 1 / 4f * Math.sin(wheel_l180);
-            double zoffset_c180 = 1 / 4f * Math.sin(wheel_c180);
+            double zoffset_r180 = 0.25*Math.sin(wheel_r180+((1.25/16f)*Math.cos(wheel_r180)));
+            double zoffset_l180 = 0.25*Math.sin(wheel_l180+((1.25/16f)*Math.cos(wheel_l180)));
+            double zoffset_c180 = 0.25*Math.sin(wheel_c180+((1.25/16f)*Math.cos(wheel_c180)));
 
-            double xrotate_r = AngleHelper.deg(Math.sin(-Math.cos(wheel_r) * 0.05));
-            double xrotate_l = AngleHelper.deg(Math.sin(-Math.cos(wheel_l) * 0.05));
-            double xrotate_c = AngleHelper.deg(Math.sin(-Math.cos(wheel_c) * 0.08));
+            double xrotate_r = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_r)/4.9375))));
+            double xrotate_l = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_l)/4.9375))));
+            double xrotate_c = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_c)/3.1875))));
 
-            double xrotate_r180 = AngleHelper.deg(Math.sin(-Math.cos(wheel_r180) * 0.05));
-            double xrotate_l180 = AngleHelper.deg(Math.sin(-Math.cos(wheel_l180) * 0.05));
-            double xrotate_c180 = AngleHelper.deg(Math.sin(-Math.cos(wheel_c180) * 0.08));
+            double xrotate_r180 = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_r180)/4.9375))));
+            double xrotate_l180 = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_l180)/4.9375))));
+            double xrotate_c180 = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_c180)/3.1875))));
 
             getTransform(LARGE_12_FRAME_LONG, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
@@ -156,15 +156,15 @@ public class SextupleBogeyRenderer {
             getTransform(LARGE_12_RIGHT_M_ROD_LONG, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1, -5.8125)
-                    .rotateX(forwards ? xrotate_r : xrotate_r180)
                     .translateZ(forwards ? zoffset_r : zoffset_r180)
+                    .rotateX(forwards ? xrotate_r : xrotate_r180)
                     .render(ms, light, vb);
 
             getTransform(LARGE_12_LEFT_M_ROD_LONG, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1, -5.8125)
-                    .rotateX(forwards ? xrotate_l : xrotate_l180)
                     .translateZ(forwards ? zoffset_l : zoffset_l180)
+                    .rotateX(forwards ? xrotate_l : xrotate_l180)
                     .render(ms, light, vb);
 
             getTransform(LARGE_12_CENTER_P_ROD_LONG, ms, inInstancedContraption)
@@ -178,8 +178,8 @@ public class SextupleBogeyRenderer {
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1.375, -5.75)
                     .rotateX(5.75)
-                    .rotateX(forwards ? xrotate_c : xrotate_c180)
                     .translateZ(forwards ? zoffset_c : zoffset_c180)
+                    .rotateX(forwards ? xrotate_c : xrotate_c180)
                     .render(ms, light, vb);
         }
     }
@@ -214,24 +214,24 @@ public class SextupleBogeyRenderer {
             double wheel_c = AngleHelper.rad(wheelAngle + 135);
 
             double wheel_r180 = AngleHelper.rad(-(wheelAngle + 0));
-            double wheel_l180 = AngleHelper.rad(-(wheelAngle + 225));
-            double wheel_c180 = AngleHelper.rad(-(wheelAngle + 135));
+            double wheel_l180 = AngleHelper.rad(-(wheelAngle - 225));
+            double wheel_c180 = AngleHelper.rad(-(wheelAngle - 135));
 
-            double zoffset_r = 1 / 4f * Math.sin(wheel_r);
-            double zoffset_l = 1 / 4f * Math.sin(wheel_l);
-            double zoffset_c = 1 / 4f * Math.sin(wheel_c);
+            double zoffset_r = 0.25*Math.sin(wheel_r+((1.25/16f)*Math.cos(wheel_r)));
+            double zoffset_l = 0.25*Math.sin(wheel_l+((1.25/16f)*Math.cos(wheel_l)));
+            double zoffset_c = 0.25*Math.sin(wheel_c+((1.25/16f)*Math.cos(wheel_c)));
 
-            double zoffset_r180 = 1 / 4f * Math.sin(wheel_r180);
-            double zoffset_l180 = 1 / 4f * Math.sin(wheel_l180);
-            double zoffset_c180 = 1 / 4f * Math.sin(wheel_c180);
+            double zoffset_r180 = 0.25*Math.sin(wheel_r180+((1.25/16f)*Math.cos(wheel_r180)));
+            double zoffset_l180 = 0.25*Math.sin(wheel_l180+((1.25/16f)*Math.cos(wheel_l180)));
+            double zoffset_c180 = 0.25*Math.sin(wheel_c180+((1.25/16f)*Math.cos(wheel_c180)));
 
-            double xrotate_r = AngleHelper.deg(Math.sin(-Math.cos(wheel_r) * 0.042));
-            double xrotate_l = AngleHelper.deg(Math.sin(-Math.cos(wheel_l) * 0.042));
-            double xrotate_c = AngleHelper.deg(Math.sin(-Math.cos(wheel_c) * 0.072));
+            double xrotate_r = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_r)/5.6875))));
+            double xrotate_l = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_l)/5.6875))));
+            double xrotate_c = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_c)/3.9375))));
 
-            double xrotate_r180 = AngleHelper.deg(Math.sin(-Math.cos(wheel_r180) * 0.042));
-            double xrotate_l180 = AngleHelper.deg(Math.sin(-Math.cos(wheel_l180) * 0.042));
-            double xrotate_c180 = AngleHelper.deg(Math.sin(-Math.cos(wheel_c180) * 0.072));
+            double xrotate_r180 = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_r180)/5.6875))));
+            double xrotate_l180 = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_l180)/5.6875))));
+            double xrotate_c180 = AngleHelper.deg(Math.asin(0.25*((-Math.cos(wheel_c180)/3.9375))));
 
             getTransform(LARGE_12_FRAME_SHORT, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
@@ -325,15 +325,15 @@ public class SextupleBogeyRenderer {
             getTransform(LARGE_12_RIGHT_M_ROD_SHORT, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1, -4.8125)
-                    .rotateX(forwards ? xrotate_r : xrotate_r180)
                     .translateZ(forwards ? zoffset_r : zoffset_r180)
+                    .rotateX(forwards ? xrotate_r : xrotate_r180)
                     .render(ms, light, vb);
 
             getTransform(LARGE_12_LEFT_M_ROD_SHORT, ms, inInstancedContraption)
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1, -4.8125)
-                    .rotateX(forwards ? xrotate_l : xrotate_l180)
                     .translateZ(forwards ? zoffset_l : zoffset_l180)
+                    .rotateX(forwards ? xrotate_l : xrotate_l180)
                     .render(ms, light, vb);
 
             getTransform(LARGE_12_CENTER_P_ROD_SHORT, ms, inInstancedContraption)
@@ -347,8 +347,8 @@ public class SextupleBogeyRenderer {
                     .rotateY(forwards ? 0 : 180)
                     .translate(0, 1.375, -4.8125)
                     .rotateX(5.75)
-                    .rotateX(forwards ? xrotate_c : xrotate_c180)
                     .translateZ(forwards ? zoffset_c : zoffset_c180)
+                    .rotateX(forwards ? xrotate_c : xrotate_c180)
                     .render(ms, light, vb);
         }
     }
