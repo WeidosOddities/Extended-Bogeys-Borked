@@ -1,0 +1,10 @@
+{
+    "parent": "block/block",
+    "loader": "forge:obj",
+    "flip_v": true,
+    "model": "extendedbogeys:models/block/bogey/extra_large/walschaerts/xl_long/right_u_link.obj",
+    "textures": {
+        "0": "extendedbogeys:block/bogey/extra_large/xl_textures"
+    },
+    "porting_lib:loader": "porting_lib:obj"
+}

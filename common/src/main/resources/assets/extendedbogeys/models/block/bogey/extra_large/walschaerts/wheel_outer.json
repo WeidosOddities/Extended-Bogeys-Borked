@@ -1,0 +1,10 @@
+{
+    "parent": "block/block",
+    "loader": "forge:obj",
+    "flip_v": true,
+    "model": "extendedbogeys:models/block/bogey/extra_large/walschaerts/wheel_outer.obj",
+    "textures": {
+        "0": "extendedbogeys:block/bogey/32x32"
+    },
+    "porting_lib:loader": "porting_lib:obj"
+}
