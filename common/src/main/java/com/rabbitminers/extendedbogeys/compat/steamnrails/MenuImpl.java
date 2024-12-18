@@ -23,9 +23,9 @@ public interface MenuImpl {
 //For registering the bogeys to the specified categories
     BogeyEntry
     //Single Axles
-        WALSCHAERTS_6L = INSTANCE.addToCategory(SINGLE_AXLE, WALSCHAERTS_6L_BOGEY,new ResourceLocation("extendedbogeys", "textures/gui/bogey_icons/doubleaxle_driver.png")),
-        WALSCHAERTS_6S = INSTANCE.addToCategory(SINGLE_AXLE, WALSCHAERTS_6S_BOGEY,new ResourceLocation("extendedbogeys", "textures/gui/bogey_icons/doubleaxle_driver.png")),
-        WALSCHAERTS_8S = INSTANCE.addToCategory(SINGLE_AXLE, WALSCHAERTS_8S_BOGEY,new ResourceLocation("extendedbogeys", "textures/gui/bogey_icons/doubleaxle_driver.png")),
+        WALSCHAERTS_TRIPLE_AXLE_LONG = INSTANCE.addToCategory(SINGLE_AXLE, WALSCHAERTS_TRIPLE_AXLE_LONG_BOGEY,new ResourceLocation("extendedbogeys", "textures/gui/bogey_icons/doubleaxle_driver.png")),
+        WALSCHAERTS_TRIPLE_AXLE_SHORT = INSTANCE.addToCategory(SINGLE_AXLE, WALSCHAERTS_TRIPLE_AXLE_SHORT_BOGEY,new ResourceLocation("extendedbogeys", "textures/gui/bogey_icons/doubleaxle_driver.png")),
+        WALSCHAERTS_QUADRUPLE_AXLE_SHORT = INSTANCE.addToCategory(SINGLE_AXLE, WALSCHAERTS_QUADRUPLE_AXLE_SHORT_BOGEY,new ResourceLocation("extendedbogeys", "textures/gui/bogey_icons/doubleaxle_driver.png")),
         SINGLE_AXLE_TRAILING = INSTANCE.addToCategory(SINGLE_AXLE, SINGLE_AXLE_TRAIlER,new ResourceLocation("extendedbogeys", "textures/gui/bogey_icons/small_0-2-0_trailing.png")),
         SINGLE_AXLE_OFFSET = INSTANCE.addToCategory(SINGLE_AXLE, SINGLE_AXLE_STANDARD,new ResourceLocation("extendedbogeys", "textures/gui/bogey_icons/small_0-2-0_trailing.png")),
         SINGLE_AXLE_LONG = INSTANCE.addToCategory(SINGLE_AXLE, SINGLE_AXLE_LONG_BOGEY,new ResourceLocation("extendedbogeys", "textures/gui/bogey_icons/small_0-2-0_trailing.png")),

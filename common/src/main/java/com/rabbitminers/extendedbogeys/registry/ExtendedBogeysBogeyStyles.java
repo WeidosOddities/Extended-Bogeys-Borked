@@ -51,6 +51,7 @@ import com.rabbitminers.extendedbogeys.bogeys.styles.QuintupleAxleBogeyRenderer.
 import com.rabbitminers.extendedbogeys.bogeys.styles.QuintupleAxleBogeyRenderer.ExtraLargeQuintupleAxlePistonlessBogeyRenderer;
 import com.rabbitminers.extendedbogeys.bogeys.styles.WalschaertsBogeyRenderer.ExtraLargeTripleAxleLongWalschaertsBogeyRenderer;
 import com.rabbitminers.extendedbogeys.bogeys.styles.WalschaertsBogeyRenderer.ExtraLargeTripleAxleShortWalschaertsBogeyRenderer;
+import com.rabbitminers.extendedbogeys.bogeys.styles.WalschaertsBogeyRenderer.LargeTripleAxleShortWalschaertsBogeyRenderer;
 import com.rabbitminers.extendedbogeys.bogeys.styles.WalschaertsBogeyRenderer.ExtraLargeQuadrupleAxleShortWalschaertsBogeyRenderer;
 import com.rabbitminers.extendedbogeys.data.ExtendedBogeysBogeySize;
 import com.simibubi.create.AllBogeyStyles;
@@ -230,18 +231,19 @@ public class ExtendedBogeysBogeyStyles {
             .size(BogeySizes.LARGE, () -> LargeSextupleAxleShortBogeyRenderer::new, ExtendedBogeysBlocks.STANDARD_BOGEYS.get(ExtendedBogeysBogeySize.LARGE))
             .build();
 
-    public static final BogeyStyle WALSCHAERTS_6L_BOGEY = create("walschaerts_6l")
-            .displayName(Components.translatable("extendedbogeys.bogeys.styles.walschaerts_6l"))
+    public static final BogeyStyle WALSCHAERTS_TRIPLE_AXLE_LONG_BOGEY = create("walschaerts_triple_axle_long")
+            .displayName(Components.translatable("extendedbogeys.bogeys.styles.walschaerts_triple_axle_long"))
             .size(ExtendedBogeysBogeySizes.EXTRA_LARGE, () -> ExtraLargeTripleAxleLongWalschaertsBogeyRenderer::new, ExtendedBogeysBlocks.EXTRA_LARGE_BOGEYS.get(ExtendedBogeysBogeySize.EXTRA_LARGE))
             .build();
 
-    public static final BogeyStyle WALSCHAERTS_6S_BOGEY = create("walschaerts_6s")
-            .displayName(Components.translatable("extendedbogeys.bogeys.styles.walschaerts_6s"))
+    public static final BogeyStyle WALSCHAERTS_TRIPLE_AXLE_SHORT_BOGEY = create("walschaerts_triple_axle_short")
+            .displayName(Components.translatable("extendedbogeys.bogeys.styles.walschaerts_triple_axle_short"))
+            .size(BogeySizes.LARGE, () -> LargeTripleAxleShortWalschaertsBogeyRenderer::new, ExtendedBogeysBlocks.STANDARD_BOGEYS.get(ExtendedBogeysBogeySize.LARGE))
             .size(ExtendedBogeysBogeySizes.EXTRA_LARGE, () -> ExtraLargeTripleAxleShortWalschaertsBogeyRenderer::new, ExtendedBogeysBlocks.EXTRA_LARGE_BOGEYS.get(ExtendedBogeysBogeySize.EXTRA_LARGE))
             .build();
 
-    public static final BogeyStyle WALSCHAERTS_8S_BOGEY = create("walschaerts_8s")
-            .displayName(Components.translatable("extendedbogeys.bogeys.styles.walschaerts_8s"))
+    public static final BogeyStyle WALSCHAERTS_QUADRUPLE_AXLE_SHORT_BOGEY = create("walschaerts_quadruple_axle_short")
+            .displayName(Components.translatable("extendedbogeys.bogeys.styles.walschaerts_quadruple_axle_short"))
             .size(ExtendedBogeysBogeySizes.EXTRA_LARGE, () -> ExtraLargeQuadrupleAxleShortWalschaertsBogeyRenderer::new, ExtendedBogeysBlocks.EXTRA_LARGE_BOGEYS.get(ExtendedBogeysBogeySize.EXTRA_LARGE))
             .build();
 

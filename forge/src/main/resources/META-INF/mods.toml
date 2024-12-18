@@ -7,8 +7,8 @@ license = "GNU GPLv3"
 modId = "extendedbogeys"
 version = "${version}"
 displayName = "Extended Bogeys"
-credits = "Rabbitminers, RailFanNate, Keanes2, Matt., kurocat471, t__cup, weido"
-authors = "Rabbitminers, RailFanNate, Keanes2, Matt., kurocat471, t__cup, weido"
+credits = "Rabbitminers, RailFanNate, Keanes2, Matt., t__cup, weido"
+authors = "Rabbitminers, RailFanNate, Keanes2, Matt., t__cup, weido"
 description = '''
 An addon mod to Create adding new styles of bogey and an interface for other mods to do so
 '''
@@ -33,11 +33,4 @@ modId="create"
 mandatory=true
 versionRange="${create_version}"
 ordering="NONE"
-side="BOTH"
-
-[[dependencies.extendedbogeys]]
-modId="railways"
-mandatory=true
-versionRange=","
-ordering="AFTER"
 side="BOTH"
