@@ -10,8 +10,12 @@ import com.simibubi.create.content.trains.bogey.StandardBogeyBlockEntity;
 import com.simibubi.create.content.trains.track.TrackMaterial;
 import com.simibubi.create.foundation.block.IBE;
 import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.Nullable;
 
 public class ExtraLargeBogeyBlock extends AbstractBogeyBlock<StandardBogeyBlockEntity>
         implements IBE<StandardBogeyBlockEntity>, ProperWaterloggedBlock, ISpecialBlockItemRequirement {
@@ -56,4 +60,9 @@ public class ExtraLargeBogeyBlock extends AbstractBogeyBlock<StandardBogeyBlockE
         return AllBlockEntityTypes.BOGEY.get();
     }
 
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return AllBlockEntityTypes.BOGEY.create(pos, state);
+    }
 }
