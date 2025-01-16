@@ -5,7 +5,6 @@ architectury {
 loom {
     accessWidenerPath = file("src/main/resources/extendedbogeys.accesswidener")
 }
-
 repositories {
     // mavens for Create Fabric and dependencies
     maven { url = "https://api.modrinth.com/maven" } // LazyDFU
