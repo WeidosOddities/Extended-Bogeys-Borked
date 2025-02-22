@@ -23,6 +23,7 @@ public interface MenuImpl {
 //For registering the bogeys to the specified categories
     BogeyEntry
     //Single Axles
+        WALSCHAERTS_DOUBLE_AXLE_SHORT = INSTANCE.addToCategory(SINGLE_AXLE, WALSCHAERTS_DOUBLE_AXLE_SHORT_BOGEY,new ResourceLocation("extendedbogeys", "textures/gui/bogey_icons/doubleaxle_driver.png")),
         WALSCHAERTS_TRIPLE_AXLE_LONG = INSTANCE.addToCategory(SINGLE_AXLE, WALSCHAERTS_TRIPLE_AXLE_LONG_BOGEY,new ResourceLocation("extendedbogeys", "textures/gui/bogey_icons/doubleaxle_driver.png")),
         WALSCHAERTS_TRIPLE_AXLE_SHORT = INSTANCE.addToCategory(SINGLE_AXLE, WALSCHAERTS_TRIPLE_AXLE_SHORT_BOGEY,new ResourceLocation("extendedbogeys", "textures/gui/bogey_icons/doubleaxle_driver.png")),
         WALSCHAERTS_QUADRUPLE_AXLE_SHORT = INSTANCE.addToCategory(SINGLE_AXLE, WALSCHAERTS_QUADRUPLE_AXLE_SHORT_BOGEY,new ResourceLocation("extendedbogeys", "textures/gui/bogey_icons/doubleaxle_driver.png")),

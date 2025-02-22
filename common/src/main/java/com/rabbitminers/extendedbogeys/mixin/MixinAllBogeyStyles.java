@@ -23,7 +23,7 @@ public class MixinAllBogeyStyles {
     )
     private static BogeyStyle test(BogeyStyleBuilder builder) {
         return builder
-                .size(ExtendedBogeysBogeySizes.EXTRA_LARGE, () -> ExtraLargeStandardBogeyRenderer::new, ExtendedBogeysBlocks.EXTRA_LARGE_BOGEYS.get(ExtendedBogeysBogeySize.EXTRA_LARGE))
+                .size(ExtendedBogeysBogeySizes.EXTRA_LARGE, () -> ExtraLargeStandardBogeyRenderer::new, ExtendedBogeysBlocks.STANDARD_BOGEYS.get(ExtendedBogeysBogeySize.EXTRA_LARGE))
                 .build();
     }
 }

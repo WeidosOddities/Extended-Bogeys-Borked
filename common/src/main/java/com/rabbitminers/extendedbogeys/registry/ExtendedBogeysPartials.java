@@ -349,6 +349,28 @@ public class ExtendedBogeysPartials {
     L_WALSCHAERTS_WHEEL_OUTER = block("bogey/large/walschaerts/wheel_outer"),
     L_WALSCHAERTS_ECCENTRIC = block("bogey/large/walschaerts/eccentric"),
 
+    L_A4S_WALSCHAERTS_FRAME = block("bogey/large/walschaerts/l4_short/frame"),
+
+    L_R4S_WALSCHAERTS_C_LEVER = block("bogey/large/walschaerts/l4_short/right_c_lever"),
+    L_R4S_WALSCHAERTS_C_ROD = block("bogey/large/walschaerts/l4_short/right_c_rod"),
+    L_R4S_WALSCHAERTS_E_LINK = block("bogey/large/walschaerts/l4_short/right_e_link"),
+    L_R4S_WALSCHAERTS_E_ROD = block("bogey/large/walschaerts/l4_short/right_e_rod"),
+    L_R4S_WALSCHAERTS_M_ROD = block("bogey/large/walschaerts/l4_short/right_m_rod"),
+    L_R4S_WALSCHAERTS_P_ROD = block("bogey/large/walschaerts/l4_short/right_p_rod"),
+    L_R4S_WALSCHAERTS_R_BAR = block("bogey/large/walschaerts/l4_short/right_r_bar"),
+    L_R4S_WALSCHAERTS_U_LINK = block("bogey/large/walschaerts/l4_short/right_u_link"),
+    L_R4S_WALSCHAERTS_V_STEM = block("bogey/large/walschaerts/l4_short/right_v_stem"),
+
+    L_L4S_WALSCHAERTS_C_LEVER = block("bogey/large/walschaerts/l4_short/left_c_lever"),
+    L_L4S_WALSCHAERTS_C_ROD = block("bogey/large/walschaerts/l4_short/left_c_rod"),
+    L_L4S_WALSCHAERTS_E_LINK = block("bogey/large/walschaerts/l4_short/left_e_link"),
+    L_L4S_WALSCHAERTS_E_ROD = block("bogey/large/walschaerts/l4_short/left_e_rod"),
+    L_L4S_WALSCHAERTS_M_ROD = block("bogey/large/walschaerts/l4_short/left_m_rod"),
+    L_L4S_WALSCHAERTS_P_ROD = block("bogey/large/walschaerts/l4_short/left_p_rod"),
+    L_L4S_WALSCHAERTS_R_BAR = block("bogey/large/walschaerts/l4_short/left_r_bar"),
+    L_L4S_WALSCHAERTS_U_LINK = block("bogey/large/walschaerts/l4_short/left_u_link"),
+    L_L4S_WALSCHAERTS_V_STEM = block("bogey/large/walschaerts/l4_short/left_v_stem"),
+
     L_A6S_WALSCHAERTS_FRAME = block("bogey/large/walschaerts/l6_short/frame"),
 
     L_R6S_WALSCHAERTS_C_LEVER = block("bogey/large/walschaerts/l6_short/right_c_lever"),
